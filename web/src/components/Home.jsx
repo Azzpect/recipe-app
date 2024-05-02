@@ -20,12 +20,12 @@ export default function Home() {
     },[])
 
   return (
-    <section className="w-[100vw] h-[92vh] bg-blue-100 box-border flex items-center justify-around">
-        <div className="w-1/3 h-1/2">
+    <section className="w-[100vw] h-[92vh] bg-blue-100 box-border flex flex-col sm:flex-row items-center justify-start gap-[10%] sm:justify-around">
+        <div className="ml-16 mt-16 sm:ml-0 sm:mt-0 w-2/3 sm:w-1/3 sm:h-1/2 self-start sm:self-center">
             <h1 className="text-5xl font-bold text-indigo-800">Welcome</h1>
             <p className="text-indigo-800 tracking-tighter font-sans font-medium">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam, repellat. Veniam enim voluptate voluptates quasi, excepturi magnam harum sequi quidem rerum odio. In labore, quidem quaerat aliquid magni nisi deserunt maxime voluptate ea iste, natus animi fugit. Alias tempora cumque et natus iste magnam, quasi,</p>
         </div>
-        <div id="slider" ref={slider} className="w-[15vw] h-[30vh] relative overflow-hidden">
+        <div id="slider" ref={slider} className="w-4/6 h-[30vh] sm:w-[15vw] sm:h-[30vh] relative overflow-hidden">
         </div>
     </section>
   )

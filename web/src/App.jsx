@@ -11,11 +11,11 @@ function App() {
     <>
     <BrowserRouter>
       <Navbar />
-      <CreateIcon/>
       <Routes>
         <Route exact path='/' element={<Home/>}></Route>
         <Route exact path='/all-recipes' element={<Recipes/>}></Route>
       </Routes>
+      <CreateIcon/>
     </BrowserRouter>
     </>
   )

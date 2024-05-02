@@ -9,7 +9,7 @@
     "compile-style": "npx tailwindcss -i ./src/css/tailwind.css -o ./src/css/main.css --watch",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "dev:server": "concurrently \"npm run dev\" \"npm run compile-style\""
+    "dev:server": "concurrently \"npm run dev -- --host 192.168.234.91\" \"npm run compile-style\""
   },
   "dependencies": {
     "react": "^18.2.0",
