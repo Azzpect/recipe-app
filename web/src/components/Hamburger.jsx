@@ -48,7 +48,7 @@ export default function Hamburger() {
         <div ref={line2} className="hamburger-line"></div>
         <div ref={line3} className="hamburger-line"></div>
     </div>
-    <div ref={hamburgerMenu} className="bg-blue-400 w-28 h-36 absolute right-2 -top-[100%] flex flex-col items-center justify-around rounded-lg transition-all duration-300 ease-linear">
+    <div ref={hamburgerMenu} className="bg-indigo-800 w-28 h-36 absolute right-2 -top-[100%] flex flex-col items-center justify-around rounded-lg transition-all duration-300 ease-linear">
       <Link to="/" className="hamburger-navitem active-hamburger-navitem" onClick={activateNav}><li>Home</li></Link>
       <Link to="/all-recipes" className="hamburger-navitem" onClick={activateNav}><li>Browse</li></Link>
       <Link to="#" className="hamburger-navitem" onClick={activateNav}><li>Favourites</li></Link>
