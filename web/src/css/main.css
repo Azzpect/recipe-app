@@ -613,6 +613,7 @@ video {
 }
 
 .userForm-input-container {
+  position: relative;
   display: flex;
   width: 66.666667%;
   flex-direction: column;
@@ -635,6 +636,41 @@ video {
   color: rgb(55 48 163 / var(--tw-text-opacity));
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.userForm-input-error-message {
+  position: absolute;
+  top: 100%;
+  z-index: 10;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  width: 40vw;
+  border-radius: 0.5rem;
+  border-width: 2px;
+  --tw-border-opacity: 1;
+  border-color: rgb(55 48 163 / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(55 48 163 / var(--tw-text-opacity));
+}
+
+.triangle {
+  position: absolute;
+  top: -50%;
+  height: 0px;
+  width: 0px;
+  border-right-width: 10px;
+  border-left-width: 10px;
+  border-bottom-width: 20px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .fixed {
@@ -709,12 +745,12 @@ video {
   height: 9rem;
 }
 
-.h-\[27vw\] {
-  height: 27vw;
-}
-
 .h-\[30vh\] {
   height: 30vh;
+}
+
+.h-\[40vh\] {
+  height: 40vh;
 }
 
 .h-\[80\%\] {
@@ -727,14 +763,6 @@ video {
 
 .h-\[92vh\] {
   height: 92vh;
-}
-
-.h-\[50vh\] {
-  height: 50vh;
-}
-
-.h-\[40vh\] {
-  height: 40vh;
 }
 
 .w-1\/5 {
@@ -987,12 +1015,12 @@ video {
     height: 50%;
   }
 
-  .sm\:h-\[30vh\] {
-    height: 30vh;
-  }
-
   .sm\:h-\[27vw\] {
     height: 27vw;
+  }
+
+  .sm\:h-\[30vh\] {
+    height: 30vh;
   }
 
   .sm\:w-1\/3 {
