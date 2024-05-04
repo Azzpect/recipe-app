@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {useForm} from "react-hook-form";
 export default function UserForm() {
-
+    let userForm = useRef(null);
     const {
         register,
         handleSubmit,
@@ -22,11 +22,12 @@ export default function UserForm() {
     }, [])
 
     function submitUserForm(data) {
+        userForm.current.reset();
         console.log(data)
     }
 
   return (
-    <form onSubmit={handleSubmit(submitUserForm)} className="flex flex-col items-center justify-around w-[80vw] h-[40vh] sm:w-[30vw] sm:h-[27vw] bg-indigo-800 absolute top-[50%] left-[50%] z-10 -translate-x-[50%] -translate-y-[50%] rounded-3xl">
+    <form ref={userForm} onSubmit={handleSubmit(submitUserForm)} className="flex flex-col items-center justify-around w-[80vw] h-[40vh] sm:w-[30vw] sm:h-[27vw] bg-indigo-800 absolute top-[50%] left-[50%] z-10 -translate-x-[50%] -translate-y-[50%] rounded-3xl">
         <h1 className="text-3xl font-bold text-white underline">{formType}</h1>
         <div className="userForm-input-container">
             <label htmlFor="username" className="userForm-input-label">Username:</label>
